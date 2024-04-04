@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Kleubar</string>
+    <string name="entrar">Entrar</string>
+    <string name="text_cadastro">Crie uma conta aqui</string>
+    <string name="cadastra_se">Cadastra-se</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="nome_xpto">Nome XPTO</string>
+    <string name="meu_e_mail">meu e-mail</string>
+    <string name="sair">Sair</string>
+    <string name="login">Login</string>
+</resources>
