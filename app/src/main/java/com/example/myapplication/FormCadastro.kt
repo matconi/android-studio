@@ -9,6 +9,7 @@ import android.widget.EditText
 import android.widget.TextView
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 class FormCadastro : AppCompatActivity() {
     private lateinit var edit_nome: EditText
@@ -48,9 +49,10 @@ class FormCadastro : AppCompatActivity() {
         FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, senha)
         .addOnCompleteListener { task ->
             var mensagem = "Cadastro realizado com sucesso."
-            if (!task.isSuccessful) {
+            if (task.isSuccessful) {
                 salvarUsuario()
-                mensagem = "Erro ao cadastrar usuário."
+            } else {
+                mensagem = "Erro ao cadastrar usuário: ${task.exception}."
             }
             val snackBar = Snackbar.make(it, mensagem, Snackbar.LENGTH_LONG)
             snackBar.show()
@@ -60,7 +62,7 @@ class FormCadastro : AppCompatActivity() {
     fun salvarUsuario() {
         val nome = edit_nome.text.toString().trim()
 
-        /*val db = FirebaseFirestore.getInstance()
+        val db = FirebaseFirestore.getInstance()
         val usuarios = hashMapOf(
             "nome" to nome
         )
@@ -73,10 +75,10 @@ class FormCadastro : AppCompatActivity() {
                     println("Documento adicionado com ID: ${documentReference.id}")
                 }
                 .addOnFailureListener { e ->
-                    println("Documento adicionado com ID: $e")
+                    println("Erro ao salvar usuário: $e")
                 }
         } else {
             println("Usuário não autenticado")
-        }*/
+        }
     }
 }
