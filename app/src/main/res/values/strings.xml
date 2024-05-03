@@ -8,4 +8,5 @@
     <string name="meu_e_mail">meu e-mail</string>
     <string name="sair">Sair</string>
     <string name="login">Login</string>
+    <string name="tela_principal">Tela Principal</string>
 </resources>

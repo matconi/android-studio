@@ -33,7 +33,7 @@
         />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/email_login"
         style="@style/Edit_Text"
         android:hint="E-mail"
         android:drawableRight="@drawable/email"
@@ -50,7 +50,7 @@
         android:drawableRight="@drawable/album"
         app:layout_constraintStart_toStartOf="@id/containercomponents"
         app:layout_constraintEnd_toEndOf="@id/containercomponents"
-        app:layout_constraintTop_toBottomOf="@id/email"
+        app:layout_constraintTop_toBottomOf="@id/email_login"
         android:maxLength="25"
         android:inputType="textPassword"
         />
