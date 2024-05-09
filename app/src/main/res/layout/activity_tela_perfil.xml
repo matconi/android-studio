@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroud"
-    tools:context=".Tela_Perfil">
+    tools:context=".TelaPerfil">
 
     <View
         android:id="@+id/containerUser"
@@ -39,7 +39,7 @@
         app:layout_constraintStart_toStartOf="parent"
         />
 
-    <TextView
+    <EditText
         android:id="@+id/textNomeUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
         app:layout_constraintStart_toStartOf="parent"
         />
 
-    <TextView
+    <EditText
         android:id="@+id/textEmailUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
